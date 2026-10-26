@@ -6,6 +6,7 @@ An [MCP](https://modelcontextprotocol.io) server for Claude Desktop, Cursor, VS 
 
 [![CI](https://github.com/celaldrg/turkiye-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/celaldrg/turkiye-mcp/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/celaldrg/turkiye-mcp?sort=semver)](https://github.com/celaldrg/turkiye-mcp/releases)
 ![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933)
 ![17 tools](https://img.shields.io/badge/tools-17-orange)
 
