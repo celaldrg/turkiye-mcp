@@ -1,0 +1,63 @@
+{
+  "name": "turkiye-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Türkiye: TCMB exchange rates, AFAD/Kandilli earthquakes, public & religious holidays, business days, provinces/districts, TCKN/VKN/IBAN validation, prayer times, weather and Turkish text tools. No API keys.",
+  "type": "module",
+  "bin": {
+    "turkiye-mcp": "dist/index.js"
+  },
+  "main": "dist/server.js",
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build": "tsc -p . && node -e \"require('fs').chmodSync('dist/index.js',0o755)\"",
+    "test": "vitest run",
+    "test:live": "LIVE=1 vitest run tests/live.test.ts",
+    "start": "node dist/index.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "turkey",
+    "turkiye",
+    "türkiye",
+    "tcmb",
+    "exchange-rates",
+    "earthquake",
+    "afad",
+    "kandilli",
+    "holidays",
+    "tckn",
+    "iban",
+    "ai-agents",
+    "claude",
+    "llm"
+  ],
+  "author": "Celalettin Durğaç (https://github.com/celaldrg)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celaldrg/turkiye-mcp.git"
+  },
+  "homepage": "https://github.com/celaldrg/turkiye-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/celaldrg/turkiye-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}
