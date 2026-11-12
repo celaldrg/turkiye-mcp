@@ -24,7 +24,13 @@ An [MCP](https://modelcontextprotocol.io) server for Claude Desktop, Cursor, VS 
 
 > **Note:** the npm package is not published yet. Until it is, `npx` installs straight from this GitHub repo (`github:celaldrg/turkiye-mcp`). After the npm release the arg becomes just `turkiye-mcp`.
 
-Requires Node.js 20 or newer.
+Requires Node.js 20 or newer. To install it globally instead, use the prebuilt release tarball:
+
+```sh
+npm install -g https://github.com/celaldrg/turkiye-mcp/releases/download/v0.1.0/turkiye-mcp-0.1.0.tgz
+```
+
+Then use `"command": "turkiye-mcp"` with no args in any config below.
 
 ### Claude Desktop
 
