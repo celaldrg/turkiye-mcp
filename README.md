@@ -1,4 +1,6 @@
-# turkiye-mcp 🇹🇷
+<p align="center">
+  <img src="assets/banner.webp" alt="turkiye-mcp: Türkiye-specific knowledge your AI agent can't guess" width="100%">
+</p>
 
 **Give your AI agent Türkiye-specific knowledge it can't guess: official TCMB exchange rates, live earthquakes, the real holiday calendar, business-day math, IBAN/TCKN/VKN checks, provinces & districts, prayer times, weather and correct Turkish text handling.**
 
@@ -19,6 +21,11 @@ An [MCP](https://modelcontextprotocol.io) server for Claude Desktop, Cursor, VS 
 - **Business-day aware.** Knows half-day eves (arife), 3-day Ramazan and 4-day Kurban Bayramı, so deadlines like "10 business days from today" come out right.
 - **English-first, Turkish-correct.** English tool descriptions and output for global agents, with correct Turkish casing, district names and "yazıyla" amounts.
 - **Tested.** Unit tests on real captured data plus a weekly live check against every upstream API.
+
+<p align="center">
+  <img src="assets/terminal-demo.webp" alt="Real MCP session: check_date, validate_iban, turkish_text and amount_to_words" width="760">
+  <br><sub>Real output from <code>scripts/demo.mjs</code>: the official MCP client SDK talking to this server over stdio. Offline tools only, nothing edited.</sub>
+</p>
 
 ## Install
 
@@ -127,6 +134,11 @@ All tools are read-only. Validators never send the numbers anywhere.
 ## Demo
 
 Real output from `node scripts/demo.mjs` (MCP client SDK → this server over stdio), captured on 26 October 2026. Full, unedited transcript: [docs/demo-transcript.md](docs/demo-transcript.md).
+
+<p align="center">
+  <img src="assets/demo.gif" alt="turkiye-mcp demo run in a terminal" width="860">
+  <br><sub>Recorded with <a href="https://github.com/charmbracelet/vhs">vhs</a>: <code>node scripts/demo.mjs</code> calling <code>turkish_text</code> and <code>validate_iban</code>.</sub>
+</p>
 
 ```text
 # 17 tools: get_exchange_rates, convert_currency, get_recent_earthquakes, get_public_holidays, check_date, add_business_days, count_business_days, list_provinces, get_province, find_district, validate_tckn, validate_vkn, validate_iban, get_prayer_times, get_weather, turkish_text, amount_to_words
